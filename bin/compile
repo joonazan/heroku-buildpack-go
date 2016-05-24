@@ -418,7 +418,7 @@ echo 'PATH=$PATH:$HOME/bin' > $build/.profile.d/go.sh
 
 mkdir $build/gocompiler
 cp -r $GOROOT/* $build/gocompiler
-echo 'PATH=$PATH:$HOME/gocompiler/bin' > $build/.profile.d/gocompiler.sh
+echo 'PATH=$PATH:$HOME/gocompiler/bin\nexport GOROOT=$HOME/gocompiler' > $build/.profile.d/gocompiler.sh
 
 if needConcurrency ${ver};
   then
